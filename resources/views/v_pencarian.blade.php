@@ -51,12 +51,34 @@
                   </div>
                   <div class="form-group">
                     <label for="inputTags">Topik (tag)</label>
-                    <input type="text" class="form-control" name="inputTags" id="inputTag" placeholder="Masukkan Topik">
+                    {{-- <input type="text" class="form-control" name="inputTags[]" id="inputTag" placeholder="Masukkan Topik">                                   --}}
+                    {{-- <select multiple name="inputTags" data-role="tagsinput" class="sr-only"> --}}
+                      {{--<option value="Amsterdam" selected="selected">Amsterdam</option>
+                       <option value="Washington" selected="selected">Washington</option>
+                      <option value="Sydney" selected="selected">Sydney</option>
+                      <option value="Beijing" selected="selected">Beijing</option>
+                      <option value="Cairo" selected="selected">Cairo</option>    --}}                 
+                    {{-- </select> --}}
+                    <div class="card-body">
+                      <label>Tags :</label>
+                      <input name="inputTags" type="text" data-role="tagsinput" name="tags" class="form-control">
+                    </div>
+  
                   </div>
                   <div class="form-group">
                     <label for="inputKeywords">Keyword</label>
                     <input type="text" class="form-control" name="inputKeywords" id="inputKeywords" placeholder="Masukkan Keyword">
                   </div>
+                  {{-- <div class="form-group"> 
+                    <select multiple data-role="tagsinput">
+                      <option value="Amsterdam">Amsterdam</option>
+                      <option value="Washington">Washington</option>
+                      <option value="Sydney">Sydney</option>
+                      <option value="Beijing">Beijing</option>
+                      <option value="Cairo">Cairo</option>
+                    </select>
+                  </div> --}}
+
                   <!-- /.card-body -->
                   <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Cari</button>

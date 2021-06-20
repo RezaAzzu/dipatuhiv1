@@ -49,9 +49,12 @@ class PencarianModel extends Model
         $decodedJson = json_decode($file, true);
         
         $industri = $this->getIndustri($data['inputIndustri']);
-        $tags = array($data['inputTags']);
+        // $tags = array($data['inputTags']);
+        $tags = explode(",", $data['inputTags']);
         $keywords = $data['inputKeywords'];
-
+        // echo $data['inputTags'];
+        // print_r($data['inputTags']);
+        // var_dump($tags);
         // foreach ($data as $index => $element)
         // {
         //     // $industri = $element['industri'];
@@ -66,11 +69,14 @@ class PencarianModel extends Model
         //     // print_r($data);
         // }
         $selectedArr = [];
+        $count = 0;
         foreach ($decodedJson as $index => $element)
         {
             // echo $element['industri'];
             if ( $element['industri'] == $industri ){
                 if( count( array_intersect( $element['tags'], $tags ) ) ){
+                    echo ++$count . '<br/>';
+                    echo $element['pertanyaan'] . '<br/>';
                     $selectedArr = array_merge( $selectedArr, $element );
                 }
             }
