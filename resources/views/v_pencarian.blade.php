@@ -26,7 +26,7 @@
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->
-          <div class="col-md-6">
+          <div class="col-md-8">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
@@ -34,34 +34,34 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form action="/pencarian/cari" method="GET">
+                @csrf
                 <div class="card-body">
                   <div class="form-group">
                     <label>Industri</label>
-                    <select class="form-control">
-                      <option>Asuransi dan reasuransi</option>
-                      <option>Dana Pensiun</option>
-                      <option>Pembiayaan</option>
-                      <option>Pergadaian</option>
-                      <option>Modal Ventura</option>
-                      <option>Pergadaian</option>
-                      <option>Lembaga Keuangan Mikro</option>                     
-                      <option>Keuangan Khusus</option>
+                    <select name="inputIndustri" id="inputIndustri" class="form-control">
+                      <option value="1">Asuransi dan reasuransi</option>
+                      <option value="2">Dana Pensiun</option>
+                      <option value="3">Pembiayaan</option>
+                      <option value="4">Pergadaian</option>
+                      <option value="5">Modal Ventura</option>
+                      <option value="6">Lembaga Keuangan Mikro</option>                     
+                      <option value="7">Keuangan Khusus</option>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Topik (tag)</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Masukkan Topik">
+                    <label for="inputTags">Topik (tag)</label>
+                    <input type="text" class="form-control" name="inputTags" id="inputTag" placeholder="Masukkan Topik">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Keyword</label>
-                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="keyword">
+                    <label for="inputKeywords">Keyword</label>
+                    <input type="text" class="form-control" name="inputKeywords" id="inputKeywords" placeholder="Masukkan Keyword">
                   </div>
-                <!-- /.card-body -->
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Cari</button>
+                  <!-- /.card-body -->
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Cari</button>
+                  </div>
                 </div>
-              </div>
               </form>
             </div>
             <!-- /.card -->

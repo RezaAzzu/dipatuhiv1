@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PencarianController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +18,6 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [HomeController::class, 'index']);
 
 route::view('/pencarian', 'v_pencarian');
+Route::get('/pencarian/cari', [PencarianController::class, 'cari']);
 
 
