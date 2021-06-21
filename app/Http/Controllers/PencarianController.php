@@ -25,9 +25,7 @@ class PencarianController extends Controller
         // print_r($decodedJson['items']);
         // echo '<br/>';
         // echo $decodedJson['items']['industri'];
-        // return view('v_home', $decodedJson);
-
-        
-        return view('v_hasilPencarian');
+        // return view('v_home', $decodedJson);        
+        return view('v_hasilPencarian', $results);
     }
 }

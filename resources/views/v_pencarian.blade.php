@@ -59,11 +59,7 @@
                       <option value="Beijing" selected="selected">Beijing</option>
                       <option value="Cairo" selected="selected">Cairo</option>    --}}                 
                     {{-- </select> --}}
-                    <div class="card-body">
-                      <label>Tags :</label>
                       <input name="inputTags" type="text" data-role="tagsinput" name="tags" class="form-control">
-                    </div>
-  
                   </div>
                   <div class="form-group">
                     <label for="inputKeywords">Keyword</label>

@@ -26,11 +26,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-10">
-            {{-- @foreach ($items as $item) --}}
+            @foreach ($items as $item)
             <div class="col-sm-10 col-md-6">
               <div class="color-palette-set">
                 <div class="bg-primary color-palette">
-                  <span><label>  ANB</label></span>
+                  <span><label>{{ $item['industri'] }}</label></span>
                   <br/>
                   <span class="description">Dicatat pertama kali pada </span>
                 </div>                
@@ -41,22 +41,22 @@
           
             <div class="card card-primary card-outline">
               <div class="card-header">
-                <h5 class="card-title m-0">Pertanyaan: </h5>
+                <h5 class="card-title m-0">Pertanyaan: {{ $item['pertanyaan'] }}</h5>
               </div>
               <div class="card-header">
                 <h5 class="card-title m-0">Topik:
-                  {{-- @foreach ($item['tags'] as $tag)
+                  @foreach ($item['tags'] as $tag)
                     {{ $tag . '; ' . ' ' }}
-                  @endforeach</h5> --}}
+                  @endforeach</h5>
               </div>
               
               <div class="card-body">
                 <h6 class="card-title">Jawaban</h6>
-                <p class="card-text">Itu dia</p>
+                <p class="card-text">{{ $item['jawaban'] }}</p>
                 {{-- <a href="#" class="btn btn-primary">Go somewhere</a> --}}
               </div>
             </div>
-            {{-- @endforeach    --}}
+            @endforeach   
           </div>
           <!-- /.col-lg-10 -->
         </div>
