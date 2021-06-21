@@ -23,9 +23,10 @@ class HomeController extends Controller
         $pertanyaan = '';
         $jawaban = '';
         $data = [];
-
+        $limit = 5;
+        
         $decodedJson = [
-            'items' => $this->HomeModel->allData(),
+            'items' => $this->HomeModel->allData($limit),
         ];
     
         // foreach ($data as $index => $element)

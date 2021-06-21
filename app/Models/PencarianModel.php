@@ -75,11 +75,18 @@ class PencarianModel extends Model
             // echo $element['industri'];
             if ( $element['industri'] == $industri ){
                 if( count( array_intersect( $element['tags'], $tags ) ) ){
-                    echo '<br/>' . ++$count . '<br/>';
-                    echo $element['pertanyaan'] . '<br/>';
-                    // $selectedArr = array_merge( $selectedArr, $element );
-                    $selectedArr[] = $element;
-                    // print_r($selectedArr);
+                    if( !empty($keywords) ){
+                        if( strpos($element['jawaban'], $keywords) !== false ){
+                            // echo '<br/>' . ++$count . '<br/>';
+                            // echo $element['pertanyaan'] . '<br/>';
+                            // echo '<br/>MASUK BAWAH!';                
+                            $selectedArr[] = $element;
+                            // print_r($selectedArr);
+                        }
+                    } else {
+                        $selectedArr[] = $element;
+                        // print_r($selectedArr);
+                    }
                 }
             }
         }

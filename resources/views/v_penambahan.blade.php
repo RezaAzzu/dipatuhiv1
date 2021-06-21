@@ -1,16 +1,40 @@
 @extends('layout.v_template')
-@section('title','Pencarian')
+@section('title','Penambahan')
+
+@section('custom-script')
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+    // Button DOM
+    let btn = document.getElementById("btn-tambah");
+
+    // Adding event listener to button
+    btn.addEventListener("click", () => {
+
+        // Fetching Button value
+        // let btnValue = btn.value;
+        let btnValue = $('#summernote').summernote('code');
+
+        // jQuery Ajax Post Request
+        $.post('/penambahan/tambah', {
+            btnValue: btnValue
+        }, (response) => {
+            // response from PHP back-end
+            console.log(response);
+        });
+    }); 
+</script>
+@endsection
 
 @section('content')
-
-
 
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->
-          <div class="col-md-8">
+          <div class="col-md-9">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
@@ -18,7 +42,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="/pencarian/cari" method="GET">
+              <form action="/penambahan/tambah" method="POST">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
@@ -35,33 +59,19 @@
                   </div>
                   <div class="form-group">
                     <label for="inputTags">Topik (tag)</label>
-                    {{-- <input type="text" class="form-control" name="inputTags[]" id="inputTag" placeholder="Masukkan Topik">                                   --}}
-                    {{-- <select multiple name="inputTags" data-role="tagsinput" class="sr-only"> --}}
-                      {{--<option value="Amsterdam" selected="selected">Amsterdam</option>
-                       <option value="Washington" selected="selected">Washington</option>
-                      <option value="Sydney" selected="selected">Sydney</option>
-                      <option value="Beijing" selected="selected">Beijing</option>
-                      <option value="Cairo" selected="selected">Cairo</option>    --}}                 
-                    {{-- </select> --}}
                       <input name="inputTags" type="text" data-role="tagsinput" name="tags" class="form-control">
                   </div>
                   <div class="form-group">
-                    <label for="inputKeywords">Keyword</label>
-                    <input type="text" class="form-control" name="inputKeywords" id="inputKeywords" placeholder="Masukkan Keyword">
+                    <label for="inputPertanyaan">Pertanyaan</label>
+                    <input type="text" class="form-control" name="inputPertanyaan" id="inputPertanyaan" placeholder="Masukkan Pertanyaan">
                   </div>
-                  {{-- <div class="form-group"> 
-                    <select multiple data-role="tagsinput">
-                      <option value="Amsterdam">Amsterdam</option>
-                      <option value="Washington">Washington</option>
-                      <option value="Sydney">Sydney</option>
-                      <option value="Beijing">Beijing</option>
-                      <option value="Cairo">Cairo</option>
-                    </select>
-                  </div> --}}
-
+                  <div class="form-group">
+                    <label>Jawaban</label>
+                    <div id="summernote"></div>
+                  </div>
                   <!-- /.card-body -->
                   <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Cari</button>
+                    <button type="submit" id="btn-tambah" class="btn btn-primary">Tambah</button>
                   </div>
                 </div>
               </form>

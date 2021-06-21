@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class HomeModel extends Model
 {
-    public function allData()
+    public function allData($limit)
     {
         //https://alexwebdevelop.com/php-json-backend/
         $fileName = 'data.json';
@@ -16,7 +16,12 @@ class HomeModel extends Model
         $file = Storage::disk('local')->get($fileName);
         $decodedJson = json_decode($file, true);
 
-        return $decodedJson;
+        if( $limit == 0 ){
+            return $decodedJson;
+
+        }
+
+        return array_slice($decodedJson, 0, $limit, true);
 
         // $json = 
         //         '
