@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Storage;
 
 class PencarianModel extends Model
 {
-    private function getIndustri($kode)
+    function getIndustri($kode)
     {
         $industri = "";
         switch ($kode) {
@@ -49,48 +49,25 @@ class PencarianModel extends Model
         $decodedJson = json_decode($file, true);
         
         $industri = $this->getIndustri($data['inputIndustri']);
-        // $tags = array($data['inputTags']);
         $tags = explode(",", $data['inputTags']);
         $keywords = $data['inputKeywords'];
-        // echo $data['inputTags'];
-        // print_r($data['inputTags']);
-        // var_dump($tags);
-        // foreach ($data as $index => $element)
-        // {
-        //     // $industri = $element['industri'];
-        //     // $pertanyaan = $element['pertanyaan'];
-        //     // $jawaban = $element['jawaban'];
-        //     // $tags = $element['tags'];
 
-        //     // if($industri = $element['inputIndustri']){
-        //     //     echo 'seblak';
-        //     // }
-        //     echo $index . ' ' . $element . '</br>';
-        //     // print_r($data);
-        // }
         $selectedArr = [];
         $count = 0;
         foreach ($decodedJson as $index => $element)
         {
-            // echo $element['industri'];
             if ( $element['industri'] == $industri ){
                 if( count( array_intersect( $element['tags'], $tags ) ) ){
                     if( !empty($keywords) ){
                         if( strpos($element['jawaban'], $keywords) !== false ){
-                            // echo '<br/>' . ++$count . '<br/>';
-                            // echo $element['pertanyaan'] . '<br/>';
-                            // echo '<br/>MASUK BAWAH!';                
-                            $selectedArr[] = $element;
-                            // print_r($selectedArr);
+                            $selectedArr[] = $element;                            
                         }
                     } else {
                         $selectedArr[] = $element;
-                        // print_r($selectedArr);
                     }
                 }
             }
         }
-        // print_r($selectedArr);
         return($selectedArr);
     }
 }

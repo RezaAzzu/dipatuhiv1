@@ -3,27 +3,33 @@
 
 @section('custom-script')
 <script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
+  $.ajaxSetup({
+     headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+  });
+  
+  $(document).ready(function() {
+      $('.summernote').summernote();
+  });
+   
+  $("#btn-tambah").click(function(e){
+
+    e.preventDefault();
+
+    var a = $('.summernote').summernote('code');
+
+    $.ajax({
+        type:'POST',
+        url:"/penambahan/tambah",
+        data:{a:a},
+        success:function(data){
+          alert(data.success);
+        }
     });
-    // Button DOM
-    let btn = document.getElementById("btn-tambah");
 
-    // Adding event listener to button
-    btn.addEventListener("click", () => {
+  });
 
-        // Fetching Button value
-        // let btnValue = btn.value;
-        let btnValue = $('#summernote').summernote('code');
-
-        // jQuery Ajax Post Request
-        $.post('/penambahan/tambah', {
-            btnValue: btnValue
-        }, (response) => {
-            // response from PHP back-end
-            console.log(response);
-        });
-    }); 
 </script>
 @endsection
 
@@ -67,7 +73,8 @@
                   </div>
                   <div class="form-group">
                     <label>Jawaban</label>
-                    <div id="summernote"></div>
+                    {{-- <div name="inputJawaban" id="summernote"></div> --}}
+                    <textarea class="summernote" id="inputJawaban" name="inputJawaban"></textarea>
                   </div>
                   <!-- /.card-body -->
                   <div class="card-footer">

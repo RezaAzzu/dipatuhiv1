@@ -22,7 +22,7 @@ route::view('/pencarian', 'v_pencarian');
 Route::get('/pencarian/cari', [PencarianController::class, 'cari']);
 route::view('/penambahan', 'v_penambahan');
 // Route::get('/penambahan/tambah', [PenambahanController::class, 'tambah']);
-Route::POST('/penambahan/tambah',[PenambahanController::class, 'tambah']);
+Route::POST('/penambahan/tambah',[PenambahanController::class, 'tambah'])->name('tambah.post');
 
 
 
