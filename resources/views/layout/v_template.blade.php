@@ -73,7 +73,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{asset('template/')}}/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="{{asset('template/')}}/dist/img/logo1.png" alt="logo" height="600" width="600">
   </div>
 
   <!-- Navbar -->
@@ -84,8 +84,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
-      <img src="{{asset('template/')}}/dist/img/AdminLTELogo.png" alt="Projek 1" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Projek 1</span>
+      <img src="{{asset('template/')}}/dist/img/logo2.png" alt="Projek 1" class="brand-image img-circle elevation-3" style="opacity: 1">
+      <span class="brand-text font-weight-light">DIPATUHI</span>
     </a>
 
     <!-- Sidebar -->
