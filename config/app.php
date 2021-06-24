@@ -53,7 +53,8 @@ return [
     */
 
     //'url' => env('APP_URL', 'http://localhost'),
-    'url' => env('APP_URL', 'http://18.138.253.222'),
+    //'url' => env('APP_URL', 'http://18.138.253.222'),
+    'url' => env('APP_URL', 'http://ec2-54-251-7-33.ap-southeast-1.compute.amazonaws.com'),
 
     'asset_url' => env('ASSET_URL', null),
 
