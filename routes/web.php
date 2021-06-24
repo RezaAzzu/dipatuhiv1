@@ -15,9 +15,9 @@ use App\Http\Controllers\PenambahanController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::view('/','landing/v_landing');
+Route::view('/','landing/v_landing')->name('landing');
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 route::view('/pencarian', 'v_pencarian');
 Route::get('/pencarian/cari', [PencarianController::class, 'cari']);

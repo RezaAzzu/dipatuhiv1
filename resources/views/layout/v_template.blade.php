@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-  <title>Projek 1 | Kelompok 1</title>
+  <title>DIPATUHI | Kelompok 1</title>
 
 
 
@@ -73,7 +73,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{asset('template/')}}/dist/img/logo1.png" alt="logo" height="600" width="600">
+    <img class="animation__shake" src="{{asset('template/')}}/dist/img/logo1.png" alt="logo" height="600" width="850">
   </div>
 
   <!-- Navbar -->
@@ -83,7 +83,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/" class="brand-link">
+    <a href="{{ route('home') }}" class="brand-link">
       <img src="{{asset('template/')}}/dist/img/logo2.png" alt="Projek 1" class="brand-image img-circle elevation-3" style="opacity: 1">
       <span class="brand-text font-weight-light">DIPATUHI</span>
     </a>
@@ -127,7 +127,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/" class="nav-link {{ request()->is('/') ? 'active' : '' }}">
+                <a href={{ route('home') }} class="nav-link {{ request()->is('/') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Halaman Utama</p>
                 </a>
@@ -185,7 +185,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/">Home</a></li>
+              <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
               {{-- <li class="breadcrumb-item"><a href="#">Layout</a></li>
               <li class="breadcrumb-item active">Top Navigation</li> --}}
             </ol>
