@@ -438,10 +438,10 @@
             <h4>Tautan Kilat</h4>
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="{{ route('home') }}">Home</a></li>
-              <li><i class="ion-ios-arrow-right"><a href="#about">Tantangan</a></li>
-              <li><i class="ion-ios-arrow-right"><a href="#facts">Data Terkini</a></li>
-              <li><i class="ion-ios-arrow-right"><a href="#services">Usulan Sistem</a></li>
-              <li><i class="ion-ios-arrow-right"><a href="#team">Tim</a></li>
+              <li><i class="ion-ios-arrow-right"></i><a href="#about">Tantangan</a></li>
+              <li><i class="ion-ios-arrow-right"></i><a href="#facts">Data Terkini</a></li>
+              <li><i class="ion-ios-arrow-right"></i><a href="#services">Usulan Sistem</a></li>
+              <li><i class="ion-ios-arrow-right"></i><a href="#team">Tim</a></li>
             </ul>
           </div>
 
@@ -451,7 +451,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
+        &copy; Copyright <strong>Kelompok 1</strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!--
