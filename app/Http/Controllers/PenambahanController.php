@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PenambahanModel;
+use App\Models\PencarianModel;
 use App\Models\HomeModel;
 use Log;
 
@@ -12,6 +13,16 @@ class PenambahanController extends Controller
     public function __construct()
     {
         $this->PenambahanModel = new PenambahanModel();
+        $this->PencarianModel = new PencarianModel();
+    }
+
+    public function penambahanForm()
+    {
+        $results = [];
+        $results = [
+            'topics' => $this->PencarianModel->getTopik()
+        ];
+        return view('v_penambahan',$results);
     }
 
     public function tambah(){
@@ -23,7 +34,7 @@ class PenambahanController extends Controller
           
         // Log::info($input);
         $results = [
-            'items' => $this->PenambahanModel->setData( $formData['items'] )    
+            'items' => $this->PenambahanModel->setData( $formData['items'] ),            
         ];
         // $results = $this->PenambahanModel->setData( $formData['items'] );
         // $userData = UserData::get();

@@ -22,38 +22,12 @@
   <link rel="stylesheet" href="{{asset('template/')}}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="{{asset('template/')}}/plugins/daterangepicker/daterangepicker.css">
-  <!-- summernote -->
-  <link rel="stylesheet" href="{{asset('template/')}}/plugins/summernote/summernote-bs4.min.css">
 
   @yield('custom-script')
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('template/')}}/dist/css/adminlte.min.css">
-    <!-- summernote -->
-    <link rel="stylesheet" href="{{asset('template/')}}/plugins/summernote/summernote-bs4.min.css">
-
   
-  <style type="text/css">
-    /* .bootstrap-tagsinput{
-        width: 100%;
-    }
-    .label-info{
-        background-color: #17a2b8;
 
-    }
-    .label {
-        display: inline-block;
-        padding: .25em .4em;
-        font-size: 75%;
-        font-weight: 700;
-        line-height: 1;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: baseline;
-        border-radius: .25rem;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,
-        border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    } */
-  </style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-navbar-fixed">
