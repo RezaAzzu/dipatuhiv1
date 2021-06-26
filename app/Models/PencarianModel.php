@@ -39,6 +39,16 @@ class PencarianModel extends Model
         return $industri;   
     }
 
+    function getTopik()
+    {
+        $decodedJson = [];
+
+        $fileName = 'topics.json';
+        $file = Storage::disk('local')->get($fileName);
+        $decodedJson = json_decode($file, true);
+        return $decodedJson;
+    }
+
     public function getData($data)
     {
         $results = [];
@@ -49,7 +59,7 @@ class PencarianModel extends Model
         $decodedJson = json_decode($file, true);
         
         $industri = $this->getIndustri($data['inputIndustri']);
-        $tags = explode(",", $data['inputTags']);
+        $tags = $data['inputTags'];
         $keywords = $data['inputKeywords'];
 
         $selectedArr = [];
