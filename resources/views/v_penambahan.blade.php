@@ -1,7 +1,7 @@
 @extends('layout.v_template')
 @section('title','Penambahan')
 
-@section('custom-script')
+@section('custom-script-footer')
 <script>
   $.ajaxSetup({
      headers: {
