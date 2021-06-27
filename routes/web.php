@@ -22,8 +22,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 // route::view('/pencarian', 'v_pencarian');
 route::get('/pencarian', [PencarianController::class, 'pencarianForm'])->name('pencarian');
 Route::get('/pencarian/cari', [PencarianController::class, 'cari'])->name('pencarian.cari');
-route::view('/penambahan', 'v_penambahan');
-// Route::get('/penambahan/tambah', [PenambahanController::class, 'tambah']);
+route::get('/penambahan', [PenambahanController::class, 'penambahanForm'])->name('penambahan');
 Route::POST('/penambahan/tambah',[PenambahanController::class, 'tambah'])->name('tambah.post');
 
 

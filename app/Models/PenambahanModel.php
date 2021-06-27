@@ -22,7 +22,7 @@ class PenambahanModel extends Model
         $pencarianModel = new PencarianModel();
 
         $industri = $pencarianModel->getIndustri($data['inputIndustri']);
-        $tags = explode(",", $data['inputTags']);
+        $tags = $data['inputTags'];
         $isi = $data['inputPertanyaan'];
         $jawaban = $data['inputJawaban'];
         $newData = array(
@@ -31,8 +31,8 @@ class PenambahanModel extends Model
             'pertanyaan' => $isi, 
             'jawaban' => $jawaban
         );
+        
         $decodedJson[] = $newData;
-
         $newJsonString = json_encode($decodedJson, JSON_PRETTY_PRINT);
         file_put_contents($path, stripslashes($newJsonString));
 
