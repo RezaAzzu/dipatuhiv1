@@ -29,7 +29,7 @@
                 <h6>Industri {{ $item['industri'] }}</h6>
               </span>
               <span class="username">
-                <h6>Topik: 
+                <h6>Topik:
                   @foreach ($item['tags'] as $tag)
                   {{ $tag . '; '}}
                   @endforeach
@@ -62,10 +62,8 @@
                 </div>
                 <!-- /.attachment-text -->
           </div>
-          <!-- /.attachment-pushed -->
+          <!-- /.card-body -->
         </div>
-        <!-- /.attachment-block -->
-
         <!-- Social sharing buttons
             <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i> Share</button>
             <button type="button" class="btn btn-default btn-sm"><i class="far fa-thumbs-up"></i> Like</button>
@@ -73,16 +71,10 @@
             -->
         @endforeach
       </div>
-      <!-- /.card-body -->
-
+      <!-- /.col-lg-10 -->
     </div>
-    <!-- /.col-lg-10 -->
-
-
+    <!-- /.row -->
   </div>
-</div>
-<!-- /.row -->
-</div><!-- /.container-fluid -->
 </div>
 <!-- /.content -->
 @endsection

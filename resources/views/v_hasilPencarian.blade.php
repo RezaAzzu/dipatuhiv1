@@ -31,12 +31,14 @@
               <span class="username">
                 <h4>{{ $item['pertanyaan'] }}</h4>
               </span>
-              <span class="username"><h6>Industri {{ $item['industri'] }}</h6></span>
+              <span class="username">
+                <h6>Industri {{ $item['industri'] }}</h6>
+              </span>
               <span class="username">
                 <h6>Topik:
-                @foreach ($item['tags'] as $tag)
-                {{ $tag . '; '}}
-                @endforeach
+                  @foreach ($item['tags'] as $tag)
+                  {{ $tag . '; '}}
+                  @endforeach
                 </h6>
               </span>
             </div>
@@ -80,14 +82,11 @@
       <!-- /.card-body -->
 
     </div>
-    <!-- /.col-lg-10 -->
-
-
+    <!-- /.row -->
   </div>
-</div>
-<!-- /.row -->
-</div><!-- /.container-fluid -->
+  <!-- /.container -->
 </div>
 <!-- /.content -->
+
 
 @endsection
