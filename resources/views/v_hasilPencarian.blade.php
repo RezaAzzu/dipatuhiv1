@@ -33,7 +33,7 @@
               </span>
               <span class="username"><h6>Industri {{ $item['industri'] }}</h6></span>
               <span class="username">
-                <h6>
+                <h6>Topik:
                 @foreach ($item['tags'] as $tag)
                 {{ $tag . '; '}}
                 @endforeach

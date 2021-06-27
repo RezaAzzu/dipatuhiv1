@@ -12,12 +12,25 @@
 
 @section('custom-script-footer')
 <script src="{{ asset('template/') }}/plugins/select2/js/select2.full.min.js"></script>
+<!-- Summernote -->
+<script src="{{asset('template/')}}/plugins/summernote/summernote-bs4.min.js"></script>
 <script>
   $(function () {
       //Initialize Select2 Elements
       $('.select2').select2()
       //Initialize Summernote Elements
-      $('.summernote').summernote();
+      $('.summernote').summernote({
+        toolbar: [
+          // [groupName, [list of button]]
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+          ['font', ['strikethrough', 'superscript', 'subscript']],
+          ['fontsize', ['fontsize']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['height', ['height']],
+          ['view', ['fullscreen', 'codeview', 'help']],
+        ]
+      });
     });
 </script>
 @endsection
