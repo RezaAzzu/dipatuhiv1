@@ -23,7 +23,8 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 route::get('/pencarian', [PencarianController::class, 'pencarianForm'])->name('pencarian');
 Route::get('/pencarian/cari', [PencarianController::class, 'cari'])->name('pencarian.cari');
 route::get('/penambahan', [PenambahanController::class, 'penambahanForm'])->name('penambahan');
-Route::POST('/penambahan/tambah',[PenambahanController::class, 'tambah'])->name('tambah.post');
+Route::POST('/penambahan/tambah',[PenambahanController::class, 'tambah'])->name('penambahan.tambah');
+Route::POST('/penambahan/tambahTopik',[PenambahanController::class, 'tambahTopik'])->name('penambahan.tambahTopik');
 
 
 Route::view('/test',[PenambahanController::class, 'v_index'])->name('test');
