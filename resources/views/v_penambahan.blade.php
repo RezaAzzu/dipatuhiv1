@@ -72,7 +72,31 @@
           ['view', ['fullscreen', 'codeview', 'help']],
         ]
       });
-    });
+
+  //   $('#inputTopics').validate({
+  //   rules: {
+  //     inputTags[]: {
+  //       required: true,
+  //     },
+  //   },
+  //   messages: {
+  //     email: {
+  //       required: "Klik 'enter' pada keyboard untuk memasukkan topik berikutnya. Jangan gunakan tanda baca koma (',').",
+  //       email: "Please enter a vaild email address"
+  //     },
+  //   errorElement: 'span',
+  //   errorPlacement: function (error, element) {
+  //     error.addClass('invalid-feedback');
+  //     element.closest('.form-group').append(error);
+  //   },
+  //   highlight: function (element, errorClass, validClass) {
+  //     $(element).addClass('is-invalid');
+  //   },
+  //   unhighlight: function (element, errorClass, validClass) {
+  //     $(element).removeClass('is-invalid');
+  //   }
+  // });      
+});
 </script>
 
 
@@ -100,7 +124,7 @@
             <div class="card-body">
               <div class="form-group">
                 <label>Industri</label>
-                <select name="inputIndustri" id="inputIndustri" class="form-control">
+                <select name="inputIndustri" id="inputIndustri" class="form-control" required>
                   <option value="1">Asuransi dan reasuransi</option>
                   <option value="2">Dana Pensiun</option>
                   <option value="3">Pembiayaan</option>
@@ -113,7 +137,7 @@
               <div class="form-group">
                 <label for="inputTags">Topik (tag)</label>
                 <select class="select2" name="inputTags[]" multiple="multiple" data-placeholder="Masukkan Topik"
-                  style="width: 100%;">
+                  style="width: 100%;" required>
                   @foreach ($topics as $topic)
                   <option>{{ $topic }}</option>
                   @endforeach
@@ -122,12 +146,12 @@
               <div class="form-group">
                 <label for="inputPertanyaan">Pertanyaan</label>
                 <input type="text" class="form-control" name="inputPertanyaan" id="inputPertanyaan"
-                  placeholder="Masukkan Pertanyaan">
+                  placeholder="Masukkan Pertanyaan" required>
               </div>
               <div class="form-group">
                 <label>Jawaban</label>
                 {{-- <div name="inputJawaban" id="summernote"></div> --}}
-                <textarea class="summernote" id="inputJawaban" name="inputJawaban"></textarea>
+                <textarea class="summernote" id="inputJawaban" name="inputJawaban" required></textarea>
               </div>
               <!-- /.card-body -->
               <div class="card-footer">
@@ -161,7 +185,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form action="{{ route('penambahan.tambahTopik') }}" method="POST">
+          <form id="inputTopics" action="{{ route('penambahan.tambahTopik') }}" method="POST">
             @csrf
             <div class="card-body">
               <div class="form-group">
@@ -175,7 +199,9 @@
               </div>
               <div class="form-group">
                 <label for="inputPertanyaan">Topik yang Ditambahkan</label>
-                <input name="inputTags" type="text" data-role="tagsinput" name="tags" class="form-control">
+                <input name="inputTags" type="text" data-role="tagsinput" name="tags" class="form-control" required>
+                <span >Jangan gunakan tanda baca koma ( , ). 
+                  Klik 'Enter' pada keyboard untuk memasukkan topik baru</span>
               </div>
             </div>
             <!-- /.card-body -->
