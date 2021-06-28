@@ -183,7 +183,7 @@
                 <img src="img/about-vision.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="ion-ios-eye-outline"></i></div>
               </div>
-              <h2 class="title"><a href="#">Tidak Adanya Acuan dalam Pemberian Jawaban</a></h2>
+              <h2 class="title"><a href="#">Belum ada standarisasi jawaban dalam pemberian pendapat</a></h2>
               <p>
                 Jawaban yang disampaikan antara satu pegawai dengan pegawai lain bisa beragam, meskipun pertanyaan yang diterima sejenis.
               </p>
@@ -288,19 +288,19 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
-            <h4 class="title"><a href="">Cepat dan Mudah</a></h4>
-            <p class="description">Sistem dapat dioperasikan tanpa membutuhkan keterampilan teknologi khusus</p>
-          </div>
-          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
             <h4 class="title"><a href="">Direktori Pendapat Hukum</a></h4>
-            <p class="description">Pegawai DP3B dapat menyimpan pertanyaan-pertanyaan hukum beserta jawaban-jawabannya dalam sistem ini</p>
+            <p class="description">Pegawai DP3B dapat menyimpan pertanyaan-jawaban hukum secara terpusat. Semua pertanyaan-jawaban itu dapat diakses kapanpun dan dari manapun</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+            <h4 class="title"><a href="">Cepat dan Mudah</a></h4>
+            <p class="description">Sistem dapat dioperasikan tanpa membutuhkan keterampilan teknologi khusus sehingga dapat mendukung DP3B dalam memberi jawaban dengan cepat dan tepat</p>
           </div>
           <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
             <div class="icon"><i class="ion-ios-paper-outline"></i></div>
-            <h4 class="title"><a href="">Acuan dalam Memberi Jawaban</a></h4>
-            <p class="description">Semua jawaban dapat diakses dari kapanpun dan di manapun untuk mendukung keseragaman jawaban</p>
+            <h4 class="title"><a href="">Mendukung Tercapainya IKU</a></h4>
+            <p class="description">Dengan akses pertanyaan-jawaban yang terpusat dan penggunaan sistem yang mudah, SLA aman sehingga IKU tercapai</p>
           </div>
           
 
@@ -327,15 +327,13 @@
 
           <div class="col-lg-4 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="{{asset('bizpage-master')}}/img/team-1.jpg" class="img-fluid" alt="">
+              <img src="{{ asset('template/dist/') }}/img/img1.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Andi Muhammad Alief Ichwan Mawladri</h4>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/p/CEf-lcQpjc9/" target="_blank"><i class="fa fa-instagram"></i></a>
+                    {{-- <a href=""><i class="fa fa-linkedin"></i></a> --}}
                   </div>
                 </div>
               </div>
@@ -344,15 +342,15 @@
 
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="{{asset('bizpage-master')}}/img/team-2.jpg" class="img-fluid" alt="">
+              <img src="{{ asset('template/dist/') }}/img/img2.jpeg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Khairunnisa Andira</h4>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
+                    {{-- <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
                     <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a> --}}
                   </div>
                 </div>
               </div>
@@ -361,15 +359,12 @@
 
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="{{asset('bizpage-master')}}/img/team-3.jpg" class="img-fluid" alt="">
+              <img src="{{ asset('template/dist/') }}/img/img3.JPG" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Reza Azzubair Wijonarko</h4>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/razzubair/" target="_blank""><i class="fa fa-linkedin"></i></a>
                   </div>
                 </div>
               </div>
