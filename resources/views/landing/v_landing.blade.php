@@ -359,7 +359,7 @@
 
           <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="{{ asset('template/dist/') }}/img/img3.JPG" class="img-fluid" alt="">
+              <img src="{{ asset('template/dist/') }}/img/img3.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Reza Azzubair Wijonarko</h4>
