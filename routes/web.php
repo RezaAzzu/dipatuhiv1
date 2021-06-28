@@ -16,7 +16,7 @@ use App\Http\Controllers\PenambahanController;
 |
 */
 Route::view('/','landing/v_landing')->name('landing');
-
+Route::view('/kalendar', 'v_kalendar')->name('kalendar');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // route::view('/pencarian', 'v_pencarian');

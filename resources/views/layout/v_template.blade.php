@@ -112,7 +112,7 @@
           </li>
           <li class="nav-header">Serba-serbi</li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="{{ route('kalendar') }}" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>
                 Kalendar
@@ -120,14 +120,14 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="pages/gallery.html" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 Galeri
               </p>
             </a>
-          </li>
+          </li> --}}
 
         </ul>
       </nav>
