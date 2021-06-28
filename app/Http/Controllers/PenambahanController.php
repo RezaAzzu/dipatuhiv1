@@ -25,6 +25,18 @@ class PenambahanController extends Controller
         return view('v_penambahan',$results);
     }
 
+    public function tambahTopik()
+    {
+        $formData = [
+            'items' => Request()->all()
+        ];
+        $results = [
+            'items' => $this->PenambahanModel->setTopics( $formData['items'] ),
+        ];
+
+        return view('v_hasilPenambahanTopik',$results);
+    }
+
     public function tambah(){
         $formData = [
             'items' => Request()->all()
