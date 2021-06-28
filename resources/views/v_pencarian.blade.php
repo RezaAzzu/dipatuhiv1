@@ -36,7 +36,7 @@
                 <div class="card-body">
                   <div class="form-group">
                     <label>Industri</label>
-                    <select name="inputIndustri" id="inputIndustri" class="form-control">
+                    <select name="inputIndustri" id="inputIndustri" class="form-control" required>
                       <option value="1">Asuransi dan reasuransi</option>
                       <option value="2">Dana Pensiun</option>
                       <option value="3">Pembiayaan</option>
@@ -56,7 +56,8 @@
                       <option value="Beijing" selected="selected">Beijing</option>
                       <option value="Cairo" selected="selected">Cairo</option>    --}}                 
                     {{-- </select> --}}
-                    <select class="select2" name="inputTags[]" multiple="multiple" data-placeholder="Masukkan Topik" style="width: 100%;">
+                    <select class="select2" name="inputTags[]" multiple="multiple" 
+                      data-placeholder="Masukkan Topik" style="width: 100%;" required>
                       @foreach ($topics as $topic)
                         <option>{{ $topic }}</option>
                       @endforeach
